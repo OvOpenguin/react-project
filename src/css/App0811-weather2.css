@@ -5,20 +5,28 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
 .card {
-    width: 600px;
-    padding:0 30px ;
+    width: 700px;
+    padding: 0 30px;
     /* border: 1px solid #d0d0d0; */
-    border-radius: 8px;
+    /* border-radius: 16px; */
     margin: 10px auto;
     /* border被圓角切掉之後，加上overflow: auto;可解決 */
-    overflow: auto; 
+    overflow: auto;
 }
 
 .cardTitle {
     text-align: center;
     border: 1px solid #d0d0d0;
-    border-bottom:none;
+    border-bottom: none;
     background-color: #f3f3f3;
 }
 
