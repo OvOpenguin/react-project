@@ -34,7 +34,7 @@ const App = () => {
             // 檢查是否連上json
             // console.log(data.data.cwaopendata.dataset);
 
-            // **(2)**取得各縣市的氣象資訊
+            // **(2)**取得各縣市的氣象資訊，從json資料中解構出來，故用大括號
             const { location } = jsonData.data.cwaopendata.dataset;
             console.log(location);
 
