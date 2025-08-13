@@ -107,8 +107,8 @@ const App = () => {
                                                         <div className='weatherName'>
                                                             {/* 天氣圖：使用執行路徑，所以要將圖片放在public資料夾中，才能讀到 */}
                                                             {/* public抓圖可以不用寫在路徑裡！意為從index角度去抓圖片 */}
-                                                            {/* 若從import方式抓圖，需以src={變數名稱}抓*/}
-                                                            {/* <figure><img src='./weatherIcon/晴午後短暫雷陣雨.svg' alt="晴午後短暫雷陣雨" /></figure> */}
+                                                            {/* !!! 若從import方式抓圖，需以src={變數名稱}抓*/}
+                                                            {/* !!! <figure><img src='./weatherIcon/晴午後短暫雷陣雨.svg' alt="晴午後短暫雷陣雨" /></figure> */}
 
                                                             <img style={{
                                                                 width: "95px",
