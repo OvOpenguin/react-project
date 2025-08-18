@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 文字方塊 -->
+    <input type="text" id="inputKeyin">
+    <script>
+        const input = document.querySelector('#inputKeyin');
+        console.dir(input);
+        // e 為 event 之意
+        // change事件 => 內容異動後，離開文字方塊時才會觸發
+        // input.addEventListener('change', (e) => {
+        //     console.log(e.target.value);
+        // })
+        // keydown, keyup, keypress 事件 => 內容異動後，及時內容觸發
+        input.addEventListener('keyup', (e)=>{
+             console.log(e.target.value);
+        })
+
+    </script>
+
+
+    <!-- js原理 -->
+    <!-- <button id="btn1">點擊次數：</button>
+    <script>
+        let btn1 = document.querySelector('#btn1');
+        let count = 0;
+        btn1.addEventListener('click', () => {
+            console.log(count++);     // 先顯示0再加1
+            // console.log(++count); //// 加1後再顯示1
+        })
+    </script> -->
+
+</body>
+
+</html>
