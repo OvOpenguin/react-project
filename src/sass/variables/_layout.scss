@@ -1,0 +1,27 @@
+/* header區 */
+
+header {
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        li a {
+            padding: 10px 10px;
+            color: brown;
+
+            &:hover {
+                color: blueviolet;
+            }
+        }
+    }
+
+}
+
+
+/* 頁尾區 */
+footer {
+    padding: 20px 0;
+    text-align: center;
+}

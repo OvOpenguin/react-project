@@ -1,0 +1,231 @@
+@use 'reset';
+@use './variables/' as *;
+
+// * {
+//     outline: 1px solid red;
+// }
+
+.story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    // height: calc(100vh - 108px); 
+    padding: 100px 50px;
+
+    @media (max-width:960px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sleft {
+
+        @media (max-width:1200px) {
+            display: none;
+        }
+
+        .sList {
+            position: relative;
+            max-width: 200px;
+            min-width: 200px;
+            padding: 30px;
+            background-image: url(../images/story/story-list-bg-150x200.png);
+            background-size: cover;
+
+
+            .sbook {
+                position: absolute;
+                top: -200px;
+                left: -10px;
+                width: 150px;
+            }
+
+            .sother {
+                position: absolute;
+                top: -80px;
+                left: 50px;
+            }
+
+            .tape {
+                position: absolute;
+                width: 80px;
+                top: -30px;
+                right: -30px;
+            }
+
+            .sMenu {
+                ul {
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    background-color: $white;
+
+                    li {
+                        a {
+                            color: $brown-100;
+                            display: block;
+                            padding: 10px;
+                        }
+
+                    }
+                }
+            }
+
+            .btn-play {
+                color: $brown-100;
+                margin-top: 20px;
+                padding: 8px 32px;
+                border-radius: 8px;
+                font-size: 1.25rem;
+                letter-spacing: 10%;
+
+                &:hover {
+                    background-color: $brown-100;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+
+
+    .sContent {
+        position: relative;
+        max-width: 500px;
+        min-width: 500px;
+        width: 40%;
+
+        .sflowerName {
+            padding-left: 60px;
+            margin-bottom: 50px;
+            position: relative;
+
+            .tape2 {
+                position: absolute;
+                height: 120px;
+                width: 20px;
+                top: -20px;
+                left: 30px;
+                transform: rotate(5deg);
+            }
+
+            .tag1 {
+                position: absolute;
+                top: -50px;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-size: 2rem;
+                width: 100px;
+                height: 100px;
+
+                background-image: url(../images/story/spring-bg.svg);
+                background-size: cover;
+            }
+
+            .tag2 {
+                position: absolute;
+                top: 50px;
+                right: -20px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-size: 1.5rem;
+                width: 50px;
+                height: 50px;
+
+                background-image: url(../images/story/summer-bg.svg);
+                background-size: cover;
+            }
+
+
+            h2 {
+                margin-bottom: 10px;
+            }
+        }
+
+        .sflowerIntro {
+            padding: 40px;
+            // 底圖
+            background-image: url(../images/story/story-bg-y-500x400.png);
+            background-size: cover;
+
+
+            .sclass {
+                display: flex;
+                gap: 30px;
+                margin-bottom: 10px;
+
+                .classtxt {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+
+                    .family,
+                    .genus {
+                        color: $brown-100;
+                        font-size: 1.5rem;
+                        border: 2px solid $brown-100;
+                        border-radius: 999px;
+                        padding: 5px 10px;
+                        background-color: $white;
+                    }
+                }
+
+            }
+
+            .introtxt {
+                color: $brown-100;
+                background-color: #fff;
+                padding: 10px;
+            }
+        }
+
+        .sbutterfly {
+            position: absolute;
+            bottom: -40px;
+            left: -10px;
+
+            // @media (max-width:1200px) {
+            //     display: none;
+            // }
+        }
+
+        .sline {
+            position: absolute;
+            bottom: -40px;
+            left: 100px;
+
+            // @media (max-width:1200px) {
+            //     display: none;
+            // }
+        }
+
+
+    }
+
+    .sImg {
+        position: relative;
+        width: 35%;
+        min-width: 400px;
+
+        .circletxt {
+            position: absolute;
+            width: 100%;
+            top: 0px;
+            left: -10px;
+            animation: circle 30s linear infinite;
+        }
+    }
+
+}
+
+@keyframes circle {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
