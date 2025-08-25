@@ -15,6 +15,7 @@ const CreateForm = ({ addTodo }) => {
     if (txt.length === 0) {
       alert("沒有輸入待辦內容");
     } else {
+      
       addTodo(txt);
       setTxt("");
     }
@@ -29,7 +30,7 @@ const CreateForm = ({ addTodo }) => {
         placeholder='輸入代辦事項'
         value={txt}
         // 去除資料"前後"的空白 => trim()
-        onChange={(e) => {setTxt(e.target.value.trim());}} />
+        onChange={(e) => { setTxt(e.target.value.trim()); }} />
 
       {/* 按下會將填寫內容回傳至父元件 */}
       <button type='button' onClick={addData}>加入</button>

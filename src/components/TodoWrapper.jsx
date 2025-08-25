@@ -9,9 +9,13 @@ const TodoWrapper = () => {
     // 如果陣列內容有增減時，索引值會異動。
     // 為避免修改資料時，造成索引值錯亂，將陣列改為[陣列物件]。
     // key值用亂數來產生 
+
+    // 因為要判定todo內容是否被點擊，所以增加一個isCompleted屬性
+    // 因為要判定todo內容是否被修改，所以增加一個isEdit屬性
+
     const [todos, setTodos] = useState([
-        { content: "繳停車費", id: Math.random(), isCompleted: false },
-        { content: "對發票", id: Math.random(), isCompleted: false },
+        { content: "繳停車費", id: Math.random(), isCompleted: false, isEdit: false },
+        { content: "對發票", id: Math.random(), isCompleted: false, isEdit: false },
     ]);
 
     // 建立刪除todo
@@ -21,7 +25,6 @@ const TodoWrapper = () => {
         setTodos(todos.filter((todo) => {
             // 使用filter方法，保留沒被刪除的id  (不等於 id 的會被return)
             return todo.id !== id
-
         }))
     }
 
@@ -37,11 +40,25 @@ const TodoWrapper = () => {
         }))
     }
 
+    // 建立切換isEdit屬性函式
+    const toggleIsEdit = (id) => {
+        setTodos(todos.map((todo) => {
+            return todo.id === id
+                ? { ...todo, isEdit: !todo.isEdit }
+                : todo
+        }))
+    }
+
+    // 建立修改todo函式
+    const  editTodo =()=>{
+        
+    }
+
+
 
     return (
         <div className='wrapper'>
             <h1>代辦事項</h1>
-
 
             {/* 傳遞方法：方法2 */}
             <CreateForm addTodo={(newContent) => {
@@ -49,14 +66,18 @@ const TodoWrapper = () => {
                 // 建立新的todo內容
                 // 1. 使用...todos 其餘運算子來保留原陣列
                 // 2. 再加上新的物件內容
-                setTodos([...todos, { content: newContent, id: Math.random(), isCompleted: false }])
+                setTodos([...todos, { content: newContent, id: Math.random(), isCompleted: false, isEdit: false }])
             }} />
 
             {
                 // todos是陣列資料，todo是使用.map時的參數，todo = todos[0], todos[1]...
                 todos.map((todo) => {
-                    //通過增加物件屬性todoname將「父元件的陣列物件資料」傳遞到「子元件 Todo.jsx」
-                    return <Todo todo={todo} key={todo.id} delTodo={delTodo} toggleCompleted={toggleCompleted} />
+                    //通過增加物件屬性todo將「父元件的陣列物件資料」傳遞到「子元件 Todo.jsx」
+                    return <Todo todo={todo} 
+                    key={todo.id} 
+                    delTodo={delTodo} 
+                    toggleCompleted={toggleCompleted} 
+                    toggleIsEdit={toggleIsEdit} />
                 })
             }
 
