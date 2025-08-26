@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import '../css/App0826b.css'
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import { BsFillFileEarmarkPersonFill } from 'react-icons/bs';
 
 const App = () => {
 
@@ -84,7 +85,7 @@ const App = () => {
           width: "100%",
           height: "100%",
           backgroundSize: "cover",
-          margin: "auto"
+          margin: "auto",
         }}>
 
 
