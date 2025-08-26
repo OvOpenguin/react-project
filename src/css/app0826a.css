@@ -1,0 +1,17 @@
+.zoom {
+    border: 1px solid red;
+    width: 300px;
+    display: inline-block;
+    margin: 100px;
+    overflow: hidden;
+}
+
+.imgScale img {
+    transform: scale(1.2);
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+    transition: all .8s;
+}
