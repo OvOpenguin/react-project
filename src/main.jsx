@@ -9,7 +9,7 @@ import { createRoot } from 'react-dom/client'
 // import App from './pages/App0813-weather3.jsx'
 // import App from './pages/Home.jsx'
 // import MyApp from './MyApp'
-import App from './pages/App0826c'
+import App from './pages/App-count.jsx'
 import { HashRouter } from 'react-router-dom'
 
 
