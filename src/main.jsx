@@ -1,16 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-// import './index.css'
-// import App from './App.jsx'
-// import App from './pages/App0805-1.jsx'
-// import App from './pages/Data0806-2.jsx'
-// import App from './pages/App0806-3.jsx'
-// import "./sass/all.scss"
-// import App from './pages/App0813-weather3.jsx'
-// import App from './pages/Home.jsx'
-// import MyApp from './MyApp'
-import App from './pages/App0826c'
 import { HashRouter } from 'react-router-dom'
+
+
+import App from './pages/App0902a-useMemo'
+
 
 
 createRoot(document.getElementById('root')).render(
