@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { HashRouter } from 'react-router-dom'
 
 
-import App from './pages/App0902a-useMemo'
+import App from './pages/App0902-membercenter.jsx'
 
 
 
