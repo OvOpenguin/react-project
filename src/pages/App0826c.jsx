@@ -1,9 +1,10 @@
-import $ from 'jquery'
+import $ from 'jquery'   //jquery 要在react專案中匯入使用
 import { useEffect } from 'react'
 import '../css/app0826c.css'
 
 const APP = () => {
 
+    // jquery 須放在useEffect內使用
     useEffect(() => {
         // 現代寫法 => .on('event',function(e){})
         $(function () {
