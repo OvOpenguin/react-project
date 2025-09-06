@@ -1,0 +1,54 @@
+.section1 {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 背景層 */
+.bg-layer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+    z-index: 0;
+}
+
+/* 淡入的新背景 */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* 文字內容 */
+.year-counter {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+
+    h1 {
+        font-size: 4rem;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+}

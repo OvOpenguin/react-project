@@ -1,0 +1,33 @@
+.section1 {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    /* // 🎨 預設底圖（1600~1635 的背景） */
+    background-image: url("./images/p10.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 1s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.year-counter {
+    color: white;
+    text-align: center;
+
+    h1 {
+        font-size: 4rem;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+}
