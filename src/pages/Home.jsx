@@ -1,9 +1,14 @@
 import React from 'react'
+import Fate from './App-Fate2'
 
 const Home = () => {
-  return (
-    <div>我是首頁喔!</div>
-  )
+    return (
+        <>
+            <div>Home</div>
+            <Fate />
+        </>
+
+    )
 }
 
 export default Home

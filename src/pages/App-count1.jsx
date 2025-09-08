@@ -1,25 +1,12 @@
+import { motion, animate } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { animate, motion } from "framer-motion";
 
 export default function YearCounter() {
   const [year, setYear] = useState(1636);
-  const [eventText, setEventText] = useState("");
-  const nodeRef = useRef(null);
-
-  // 關鍵年份 & 對應事件
-  const keyEvents = {
-    1636: "荷蘭鬱金香泡沫",
-    1929: "美國大蕭條",
-    2001: "網路泡沫破裂",
-    2008: "金融海嘯",
-    2020: "COVID-19 金融動盪",
-  };
-
-  const startYear = 1600;
-  const endYear = 2025;
+  const nodeRef = useRef();
 
   useEffect(() => {
-    let currentYear = startYear;
+    let currentYear = 1636;
     let timer;
 
     function runCounter() {
@@ -46,19 +33,15 @@ export default function YearCounter() {
     return () => clearInterval(timer);
   }, []);
 
-  // ✅ 用 animate() 讓數字平滑滾動
+  // ✅ 用 animate 製作數字平滑過渡
   useEffect(() => {
     if (nodeRef.current) {
-      const controls = animate(
-        parseInt(nodeRef.current.textContent || startYear),
-        year,
-        {
-          duration: 0.3,
-          onUpdate(value) {
-            nodeRef.current.textContent = Math.floor(value);
-          },
-        }
-      );
+      const controls = animate(parseInt(nodeRef.current.textContent), year, {
+        duration: 0.3,
+        onUpdate(value) {
+          nodeRef.current.textContent = Math.floor(value);
+        },
+      });
       return () => controls.stop();
     }
   }, [year]);
