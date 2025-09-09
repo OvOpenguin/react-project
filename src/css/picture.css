@@ -1,0 +1,39 @@
+.pictures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture {
+    padding: 1rem;
+    width: 500px;
+}
+.picture p{
+    margin-top: 1rem;
+}
+
+.picture a{
+ color: rgb(48, 170, 170);
+}
+.picture a:hover{
+    color: rgb(29, 185, 133);
+}
+
+
+.imgContainer {
+    height: 40vh;
+    overflow: hidden;
+}
+
+.imgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.imgContainer img:hover {
+    transform: scale(1.25);
+}
+
